@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingresar al panel</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="container container-narrow">
+    <header class="brand">
+      <span class="logo">Administración</span>
+      <h1>Ingresar al panel</h1>
+      <p>Acceso solo para el personal del negocio.</p>
+    </header>
+
+    <form id="form-login" class="card" novalidate>
+      <div id="alerta" class="alert" role="alert"></div>
+
+      <div class="field">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" autocomplete="username" required autofocus />
+      </div>
+
+      <div class="field">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required />
+      </div>
+
+      <button type="submit" id="btn-login" class="btn btn-block">Ingresar</button>
+    </form>
+
+    <p class="footer-link"><a href="/">← Volver a la página de reservas</a></p>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

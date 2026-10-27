@@ -1,0 +1,32 @@
+{
+  "name": "turnos-pymes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema de Reservas y Turnos Online para pymes (Node.js + Express + MongoDB)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "setup": "node scripts/setup.js",
+    "cambiar-password": "node scripts/setup.js --solo-password",
+    "empaquetar": "node scripts/empaquetar.js",
+    "generar-hash": "node scripts/generar-hash.js"
+  },
+  "keywords": [
+    "turnos",
+    "reservas",
+    "express",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Luciano Contreras",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}

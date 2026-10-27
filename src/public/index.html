@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservá tu turno</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="brand">
+      <span class="logo" id="negocio-nombre">Turnos Online</span>
+      <h1>Reservá tu turno</h1>
+      <p id="horario-info">Elegí el día y el horario que te quede mejor.</p>
+    </header>
+
+    <form id="form-reserva" class="card" novalidate>
+      <div id="alerta" class="alert" role="alert"></div>
+
+      <div class="field">
+        <label for="fecha">1. Fecha</label>
+        <input type="date" id="fecha" name="fecha" required />
+      </div>
+
+      <div class="field">
+        <span class="label">2. Horario <span class="hint">· los tachados ya están ocupados</span></span>
+        <div id="slots" class="slots">
+          <div class="slots-empty">Primero elegí una fecha.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="nombreCliente">3. Tu nombre</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Ej: Ana Gómez" maxlength="80" required />
+      </div>
+
+      <div class="field">
+        <label for="whatsapp">4. WhatsApp <span class="hint">· con código de área</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ej: 11 2345 6789" required />
+      </div>
+
+      <button type="submit" id="btn-reservar" class="btn btn-block">Reservar</button>
+    </form>
+
+    <p class="footer-link"><a href="/admin">Panel de administración</a></p>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cliente.js"></script>
+</body>
+</html>
