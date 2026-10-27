@@ -30,8 +30,8 @@ services:
         generateValue: true
       # Estos tres los pide Render al crear el servicio (no se guardan en el repo)
       - key: MONGODB_URI
-        sync: mongodb+srv://lucianocontrerasestudio04_db_user:vNpAqzLp6UA6tR1I@lucianodemian04.hdxmkim.mongodb.net/turnos_pymes?retryWrites=true&w=majority
+        sync: false
       - key: ADMIN_USER
-        sync: adminturnosdemo
+        sync: false
       - key: ADMIN_PASSWORD_HASH
-        sync: scrypt$00547423f4a12118d5f2cc92a1517c39$62a1c678cc76df7c8e53d22d12c5a43cc8a8b769476cbf3b9adc115ffaceaecb219e7b52f1ea2ce577a3645671a3a188de572f3255c570ba0f13673105d31dc1
+        sync: false
