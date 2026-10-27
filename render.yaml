@@ -34,4 +34,4 @@ services:
       - key: ADMIN_USER
         sync: adminturnosdemo
       - key: ADMIN_PASSWORD_HASH
-        sync: scrypt$4607bfacb80805e2891d70a8cdc06ea6$4eb7f262458ca998ff8a50b643d976a6dedf4b26248f8a41d968fea4f3a99a1386cdcfabad7f18ec753dbd5f9e73a5f82af03a1428b8bcb2fd3f420448449037
+        sync: scrypt$00547423f4a12118d5f2cc92a1517c39$62a1c678cc76df7c8e53d22d12c5a43cc8a8b769476cbf3b9adc115ffaceaecb219e7b52f1ea2ce577a3645671a3a188de572f3255c570ba0f13673105d31dc1
