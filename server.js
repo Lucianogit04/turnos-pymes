@@ -58,9 +58,7 @@ app.use(require('./src/middlewares/errorHandler'));
 // ---------- Arranque ----------
 async function start() {
   try {
-    if (!process.env.ADMIN_USER || !process.env.ADMIN_PASSWORD_HASH) {
-      console.warn('⚠️  Administrador sin configurar: ejecutá "npm run setup" para crear usuario y contraseña.');
-    }
+    console.log(require('./src/config/admin').diagnosticoAdmin());
 
     await connectDB(process.env.MONGODB_URI);
     const server = app.listen(PORT, () => {

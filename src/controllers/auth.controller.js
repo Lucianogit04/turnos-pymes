@@ -1,6 +1,7 @@
 // src/controllers/auth.controller.js
 const crypto = require('crypto');
 const { verifyPassword } = require('../utils/password');
+const { getAdmin } = require('../config/admin');
 const {
   crearToken,
   verificarToken,
@@ -44,7 +45,7 @@ function login(req, res) {
     return res.status(429).json({ ok: false, mensaje: 'Demasiados intentos. Esperá 15 minutos.' });
   }
 
-  const { ADMIN_USER, ADMIN_PASSWORD_HASH } = process.env;
+  const { usuario: ADMIN_USER, hash: ADMIN_PASSWORD_HASH } = getAdmin();
   if (!ADMIN_USER || !ADMIN_PASSWORD_HASH) {
     return res.status(503).json({
       ok: false,

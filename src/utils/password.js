@@ -15,7 +15,7 @@ function hashPassword(password) {
 function verifyPassword(password, stored) {
   if (typeof stored !== 'string' || !stored.startsWith('scrypt$')) return false;
   const [, salt, hashHex] = stored.split('$');
-  if (!salt || !hashHex) return false;
+  if (!salt || !/^[0-9a-f]{128}$/.test(hashHex || '')) return false; // hash incompleto o mal copiado
   const esperado = Buffer.from(hashHex, 'hex');
   const calculado = crypto.scryptSync(password, salt, esperado.length);
   return esperado.length === calculado.length && crypto.timingSafeEqual(esperado, calculado);
